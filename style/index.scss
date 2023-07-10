@@ -395,12 +395,16 @@ main {
     box-sizing: border-box;
     padding: 25px 0;
     width: 35%;
-    max-width: 300px;
     display: inherit;
     flex-direction: column;
     align-items: center;
     height: 650px;
     box-shadow: 12px 6px 17px 3px lightgrey;
+
+    @media screen and (max-width: 900px){
+      text-align: center;
+      min-width: 300px;
+    }
 
     .text-input {
       position: relative;
