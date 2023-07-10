@@ -11,9 +11,11 @@ const optionsList = selectOptions.querySelectorAll("li");
 const spotStatus = document.querySelectorAll(".checkBoxSpot");
 const callout = document.getElementById("callout");
 const arrowIcon = customSelect.querySelector(".arrow-icon");
+const statusCheckBox = document.querySelectorAll('.countCheckBox');
 
 let drinks = [];
 let selectedCheckbox = null;
+let statusSelectedCheckbox = null;
 
 const checkFormValidity = () => {
   const isTextInputValid = name.value.trim() !== "";
@@ -83,6 +85,16 @@ spotStatus.forEach((el) => {
   });
 });
 
+statusCheckBox.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    templateParams = {
+      ...templateParams,
+      count: e.target.value,
+    };
+    submit.disabled = !checkFormValidity();
+  });
+});
+
 spotStatus.forEach((checkbox) => {
   checkbox.addEventListener("change", () => {
     if (selectedCheckbox) {
@@ -95,6 +107,22 @@ spotStatus.forEach((checkbox) => {
       selectedCheckbox = checkbox;
     } else {
       selectedCheckbox = null;
+    }
+  });
+});
+
+statusCheckBox.forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    if (statusSelectedCheckbox) {
+      statusSelectedCheckbox.checked = false;
+      statusSelectedCheckbox.disabled = false;
+    }
+
+    if (checkbox.checked) {
+      checkbox.disabled = true;
+      statusSelectedCheckbox = checkbox;
+    } else {
+      statusSelectedCheckbox = null;
     }
   });
 });

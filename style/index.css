@@ -314,7 +314,7 @@ main {
   display: inherit;
   flex-direction: column;
   align-items: center;
-  height: 550px;
+  height: 650px;
   box-shadow: 12px 6px 17px 3px lightgrey;
 }
 .form-section .form .text-input {
@@ -461,6 +461,9 @@ main {
   background: #FDFCF7;
   width: 15%;
   height: 300px;
+}
+.dress-code .dress--wrapper .dress--item:first-child {
+  display: none;
 }
 .dress-code .dress--wrapper .dress--item:nth-child(2) {
   background: #F5E2D3;
