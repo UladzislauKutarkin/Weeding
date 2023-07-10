@@ -162,6 +162,10 @@ main {
       font-size: 100px;
       font-family: 'Pacifico', cursive;
       letter-spacing: 10px;
+
+      @media screen and (max-width: 600px){
+        text-align: center;
+      }
     }
   }
 }

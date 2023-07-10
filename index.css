@@ -132,6 +132,11 @@ main {
   font-family: "Pacifico", cursive;
   letter-spacing: 10px;
 }
+@media screen and (max-width: 600px) {
+  .welcome-section .flex-column div {
+    text-align: center;
+  }
+}
 
 .description-section {
   background: #fff;
