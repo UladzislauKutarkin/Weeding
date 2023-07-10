@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="index.css" rel="stylesheet" type="text/css"/>
+	<link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="icon" type="image/x-icon" href="img/icons8-spa-flower-32.png">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@200&display=swap"
+		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=e810403d-557f-4570-9d91-20636c2aba89&lang=ru_RU"
+			type="text/javascript">
+	</script>
+	<script type="text/javascript">
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [54.107834, 28.322091],
+                zoom: 18
+            });
+
+            myPieChart = new ymaps.Placemark([
+                54.107834, 28.322091
+            ], {
+                balloonContent: '<strong>Праздник тут</strong>'
+            }, {
+                preset: 'islands#circleIcon',
+                iconColor: '#3caa3c'
+            });
+
+            myMap.geoObjects
+                .add(myPieChart)
+        }
+	</script>
+	<title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+	<main>
+		<div class="black">
+			<header class="header">
+				<nav>
+					<ul class="nav--list">
+						<li class="nav--list__item"><a href="#place">Локация</a></li>
+						<li class="nav--list__item"><a href="#plan">Программа дня</a></li>
+						<li class="nav--list__item"><a href="#color">Цветовая гамма</a></li>
+						<li class="nav--list__item"><a href="#form">Пригласительная</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="welcome-section">
+				<div class="welcome-section__background"></div>
+				<div class="flex-column">
+					<h2>
+						18 августа 2023
+					</h2>
+					<div>
+						Павел и Лидия
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="description-section">
+			<hr>
+			<div>
+				Пожалуйста, не ломайте голову над подарками! Мы будем очень рады Вашему приятному вкладу в наше
+				свадебное путешествие!
+
+				Так же мы будем счастливы если Вы поддержите нашу идею помочь приюту животных.
+
+				Букеты цветов и бутылки с чудодейственными напитками предлагаем вам заменить на корм для животных или
+				сертификаты в зоомагазины. Мы уверены, что такая маленькая помощь согреет сердца многих!
+			</div>
+		</section>
+		<section class="time-section">
+			<div class="blur"></div>
+			<div class="time-wrapper">
+				<div class="center">
+					<h2>
+						Свадьба Павла и Лидии
+					</h2>
+					<div>
+						До события осталось
+					</div>
+				</div>
+				<div class="flex-row">
+					<div class="flex-column">
+						<div class="day time-value" id="days">99</div>
+						<div class="value-type">Дней</div>
+					</div>
+					<div class="flex-column">
+						<div class="hour time-value" id="hours">99</div>
+						<div class="value-type">Часов</div>
+					</div>
+					<div class="flex-column">
+						<div class="min time-value" id="minutes">99</div>
+						<div class="value-type">Минут</div>
+					</div>
+					<div class="flex-column">
+						<div class="sec time-value" id="seconds">99</div>
+						<div class="value-type">Секунд</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="map-section" id="place">
+			<div id="map" style="width: 700px; height: 400px"></div>
+			<div class="map-section--description">
+				<span>Место проведения</span>
+				<hr>
+				<span>кафе «Гранат»,ул. Фруктовая 4Г/2, Жодино</span>
+			</div>
+		</section>
+		<section class="plan-section">
+			<h3 id="plan">
+				План мероприятия
+			</h3>
+			<div class="plan--colums-wrapper">
+				<ul class="plan--list">
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 16:00 -
+              </span>
+						<span>
+                Фуршет
+              </span>
+					</li>
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 17:00 -
+              </span>
+						<span>
+                Начало мероприятия
+              </span>
+					</li>
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 17:30 -
+              </span>
+						<span>
+                Первое застолье
+              </span>
+					</li>
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 17:40 -
+              </span>
+						<span>
+                Перерыв
+              </span>
+					</li>
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 18:00 -
+              </span>
+						<span>
+                Второе застолье
+              </span>
+					</li>
+				</ul>
+				<div class="vertical-line"></div>
+				<ul class="plan--list">
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 18:50 -
+              </span>
+						<span>
+                Танцевальная программа
+              </span>
+					</li>
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 20:00 -
+              </span>
+						<span>
+                Традиции (мальчик/девочка)
+              </span>
+					</li>
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 20:50 -
+              </span>
+						<span>
+                Музыкальная пауза
+              </span>
+					</li>
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 22:00 -
+              </span>
+						<span>
+                Традиции (букет невесты)
+              </span>
+					</li>
+					<li class="plan--list-item">
+              <span class="time-description">
+                - 23:00 -
+              </span>
+						<span>
+                Окончание
+                     </span>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="dress-code" id="color">
+			<div class="blur"></div>
+			<div class="dress--description">
+				Мы будем очень рады, если вы будете в цветах приведенных ниже
+			</div>
+			<div class="dress--wrapper">
+				<div class="dress--item"></div>
+				<div class="dress--item"></div>
+				<div class="dress--item"></div>
+				<div class="dress--item"></div>
+				<div class="dress--item"></div>
+			</div>
+		</section>
+		<section class="photo-section">
+			<div class="photo-wrapper">
+				<img src="img/IMG_0478.JPG" alt="Photo 1">
+			</div>
+			<div class="photo-wrapper">
+				<img src="img/IMG_0493.JPG" alt="Photo 2">
+			</div>
+			<div class="photo-wrapper">
+				<img src="img/IMG_0496.JPG" alt="Photo 3">
+			</div>
+		</section>
+		<section class="form-section" id="form">
+			<div class="form">
+				<div class="form--header">
+					Вы придете?
+				</div>
+				<form>
+					<label for="name" class="text-input">
+						<input type="text" id="name" placeholder="Имя" required>
+						<svg width="280px" height="18px" viewBox="0 0 280 18" class="border">
+							<path d="M0,12 L223.166144,12 C217.241379,12 217.899687,12 225.141066,12 C236.003135,12 241.9279,12 249.827586,12 C257.727273,12 264.639498,12 274.514107,12 C281.097179,12 281.755486,12 276.489028,12"></path>
+						</svg>
+						<svg width="14px" height="12px" viewBox="0 0 14 12" class="check">
+							<path d="M1 7 5.5 11 L13 1" fill="#FDFCF7"></path>
+						</svg>
+					</label>
+					<div style="text-align: left;" class="checkbox-wrapper">
+						<div class="item">
+							<div class="checkbox-circle2 checkbox">
+								<input type="checkbox" class="checkBoxSpot" id="checkbox-circle1" name="check"
+									   value="приду">
+								<label for="checkbox-circle1">Да, приду</label>
+							</div>
+						</div>
+						<div class="item">
+							<div class="checkbox-circle2">
+								<input type="checkbox" class="checkBoxSpot" id="checkbox-circle2" name="check"
+									   value="не приду">
+								<label for="checkbox-circle2">Простите, не приду</label>
+							</div>
+						</div>
+					</div>
+					<div class="select-wrapper">
+						<span class="selected-value">Выберете ваши напитки</span>
+						<ul class="select-options" style="display: none">
+							<li>Водка</li>
+							<li>Вино</li>
+							<li>Шапанское</li>
+							<li>Коньяк</li>
+						</ul>
+					</div>
+					<div style="margin-top:13px;">
+						<input id='submit' type="button" value="Отправить" disabled class="submit-button"/>
+					</div>
+					<div id="callout" class="callout">
+						<span class="callout-text">Спасибо, сообщение отправленно!</span>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+</div>
+<script src="index.js"></script>
+<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("pLPB85QbqNc9xtWJ7");
+    })();
+</script>
+</body>
+</html>
