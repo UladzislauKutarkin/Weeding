@@ -168,6 +168,8 @@ main {
 }
 .time-section .time-wrapper .center {
   padding-bottom: 45px;
+  color: white;
+  font-weight: 600;
 }
 .time-section .time-wrapper .center h2 {
   font-size: 36px;
@@ -178,6 +180,8 @@ main {
 .time-section .time-wrapper .flex-column {
   font-size: 24px;
   min-width: 90px;
+  color: white;
+  font-weight: 600;
   border-right: 1px solid rgba(255, 255, 255, 0.8);
 }
 .time-section .time-wrapper .flex-column:last-child {

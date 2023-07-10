@@ -209,6 +209,8 @@ main {
       @extend %flexColumnCenter;
 
       padding-bottom: 45px;
+      color: white;
+      font-weight: 600;
 
       h2 {
         font-size: 36px;
@@ -216,6 +218,7 @@ main {
 
       div {
         font-size: 28px;
+
       }
     }
 
@@ -228,6 +231,8 @@ main {
       font-size: 24px;
       min-width: 90px;
 
+      color: white;
+      font-weight: 600;
       border-right: 1px solid $whiteOpacity;
 
       &:last-child {
